@@ -1,0 +1,46 @@
+main.cards {
+    display: flex;
+    justify-content: right;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    padding: 0px 70px;
+    
+}
+
+main.cards section.card h2 {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+main.cards section.card span {
+    font-weight: 500;
+    max-width: 370px;
+    font-size: 40px;
+}
+
+.btnConteudo {
+    background: #80ED99;
+    font-size: 25px;
+    position: relative;
+    width: 50%;
+    height: 34px;
+    margin: 35px 0;
+    text-align: center;
+    float: right;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnConteudo:hover {
+    background: #fff;
+    border: solid 3px #80ED99;
+}
