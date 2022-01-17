@@ -2,6 +2,7 @@
   --branco-background: #f3f3f3;
   --color-tema-geral: #594638;
   --cinza-background: #272727;
+
 }
 
 * {
@@ -54,6 +55,9 @@ body {
 img {
   width: 100%;
   height: auto;
+
+  background: url(altumcode-XMFZqrGyV-Q-unsplash.jpg);
+filter: drop-shadow(28px -28px 0px #B09B88);
 }
 
 .button {
@@ -77,7 +81,7 @@ img {
 /*-----   HEADER   -----*/
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0 1.5rem 0 1.5rem;
 }
 
@@ -249,19 +253,6 @@ nav.show div.icon-close {
 
 #home .image {
   position: relative;
-}
-
-#home .image::before {
-  content: "";
-  position: absolute;
-  top: -16.8%;
-  left: 16.7%;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-
-  background: #ccf4e6;
-  border-radius: 0.25rem;
 }
 
 #home .image img {
