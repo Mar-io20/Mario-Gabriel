@@ -3,38 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <title>Mario Gabriel</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Franklin:ital@1&family=Poppins:wght@300;400;500;900&family=Red+Hat+Mono:wght@300;400&family=Roboto+Mono:ital@1&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style-home.css" />
-    <link rel="stylesheet" href="style-home-conteudo.css">
+    <link rel="stylesheet" href="style-home-conteudo.css" />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a class="logo" href="/">Mario Gabriel</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="#">Mario<spam>Gabriel</spam>.</a>
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Inicío</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">projetos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
         </div>
-        <ul class="nav-list">
-          <li><a href="/">Início</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
+
+        <div class="toggle icon-menu1"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
 
-    <main class="cards">
-      <section class="card">
-        <h2>Olá!</h2>
-        <span>Sou o Mario Gabriel. Um estudante de UX/UI e front-end. Formado em gestão de TI pela Unicesumar. Também faço algumas consultas de hardware.</span>
-        <button class="btnConteudo" type="button"><a href="contate.html">Contate-me</a></button>
-      </section>
-    </main>
+    <main>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="midias/home-state.jpg"
+              alt="Local de trabalho bem organizado"
+            />
+          </div>
 
+          <div class="text">
+            <h2 class="title">Olá! Eu sou o Mário Gabriel!</h2>
+            <p>
+              
+            </p>
+            <a
+              class="button"
+              href="https://api.whatsapp.com/send?phone=+5512981182732&text=Entre em contato comigo"
+              target="_blank"
+              >Agendar um horário</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+    </main>
     <footer></footer>
     <script src="mobile-navbar.js"></script>
   </body>
