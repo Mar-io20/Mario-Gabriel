@@ -56,8 +56,11 @@ img {
   width: 100%;
   height: auto;
 
+}
+.sombra-img{
   background: url(altumcode-XMFZqrGyV-Q-unsplash.jpg);
-filter: drop-shadow(28px -28px 0px #B09B88);
+  filter: drop-shadow(28px -28px 0px #B09B88);
+
 }
 
 .button {
@@ -167,9 +170,9 @@ nav ul li a::after {
 
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -.5rem;
 
-  background: #69b99d;
+  background: #594638;
 
   transition: width 0.4s;
 }
@@ -299,7 +302,7 @@ nav.show div.icon-close {
   height: 100%;
   width: 100%;
 
-  background: #ccf4e6;
+  background: #594638;
   border-radius: 0.25rem;
 }
 
