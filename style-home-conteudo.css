@@ -57,7 +57,7 @@ img {
   height: auto;
 
 }
-.sombra-img{
+img .sombra-img{
   background: url(altumcode-XMFZqrGyV-Q-unsplash.jpg);
   filter: drop-shadow(28px -28px 0px #B09B88);
 
