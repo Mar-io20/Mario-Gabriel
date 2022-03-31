@@ -1,42 +1,74 @@
-class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) {
-        this.mobileMenu = document.querySelector (mobileMenu);
-        this.navList = document.querySelector (navList);
-        this.navLinks = document.querySelector (navLinks);
-        this.activeClass = "active";
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    animateLinks() {
-        this.navLinks.forEach((link, index) => {
-            console.log(index / 7);
-            link.style.animation
-            ? (link.style.animation = "")
-            : (link.style.animation = 'navLinkFade 0.5s ease forwards 0.3s');
-        });
-    }
-
-    handleClick(){
-        this.navList.classList.toggle(this.activeClass);
-        this.animateLinks();
-    }
-
-    addClickEvent() {
-        this.mobileMenu.addEventListener("click", this.handleClick);
-    } 
-
-    init() {
-        if (this.mobileMenu){
-            this.addClickEvent();
-        }
-        return this
-    }
+/*--- open and close menu  ----*/
+const nav = document.querySelector("#header nav")
+const toggle = document.querySelectorAll("nav .toggle")
+ 
+for (const element of toggle) {
+    element.addEventListener('click', function(){
+        nav.classList.toggle('show')
+    })
 }
 
-const mobileNavbar = new MobileNavbar (
-    ".mobile-menu",
-    ".nav-list",
-    ".nav-list li",
-);
-mobileNavbar.init();
+/*---  when you click the item, close menu  ----*/
+const links = document.querySelectorAll('nav ul li a')
+
+for(const link of links) {
+    link.addEventListener('click', function() {
+        nav.classList.remove('show')
+    })
+}
+
+/*------  changed header when the scroll -----*/
+const header = document.querySelector('header')
+const navHeight = header.offsetHeight
+
+window.addEventListener('scroll', function () {
+   if(window.scrollY >= navHeight) {   
+    header.classList.add('scroll')
+    } else {
+    header.classList.remove('scroll')
+    }
+})
+
+/*------   slide    -------*/
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    heyboard: true,
+    breakpoints: {
+        776: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        },
+
+        992: {
+            slidesPerView: 2,
+            setWrapperSize: true,
+        },
+
+        1200: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        }
+    }
+})
+
+/*---   ScrollReveal: mostrar elementos quando der scroll na página ----*/
+const scrollReveal = ScrollReveal ({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `#home .image, #home .text,
+    #about .image, #about .text,
+    #services header, #services .card,
+    #testimonials header, #testimonials .testimonials,
+    #contact .text, #contact .links,
+    footer .brand, footer .social`,
+    {interval: 100}
+)
